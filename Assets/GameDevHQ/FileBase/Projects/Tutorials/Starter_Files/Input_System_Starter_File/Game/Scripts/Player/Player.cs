@@ -51,6 +51,12 @@ namespace Game.Scripts.Player
 
             _input = new PlayerInputActions();
             _input.Player.Enable();
+            _input.Player.Interact.performed += Interact_performed;
+        }
+
+        private void Interact_performed(InputAction.CallbackContext context)
+        {
+            InteractableZone.onZoneInteractionComplete += InteractableZone_onZoneInteractionComplete;
         }
 
         private void Update()
@@ -58,11 +64,31 @@ namespace Game.Scripts.Player
             if (_canMove == true)
                 CalcutateMovement();
 
+
         }
 
         private void CalcutateMovement()
         {
             _playerGrounded = _controller.isGrounded;
+            var move = _input.Player.Movement.ReadValue<Vector2>();
+            var velocity = move * _speed;
+
+            if (_playerGrounded)
+                velocity.x = 0f;
+            if (!_playerGrounded)
+            {
+                velocity.x += -20f * Time.deltaTime;
+            }
+
+            _anim.SetFloat("Speed", move.magnitude);
+
+            var playerMove = new Vector3(0, 0, move.y);
+
+            transform.Translate(playerMove * Time.deltaTime * _speed);
+            transform.Rotate(0, move.x, 0);
+
+            _playerGrounded = _controller.isGrounded;
+
             /*float h = Input.GetAxisRaw("Horizontal");
             float v = Input.GetAxisRaw("Vertical");
                      
@@ -83,24 +109,7 @@ namespace Game.Scripts.Player
             
             _controller.Move(velocity * Time.deltaTime);*/
 
-            var move = _input.Player.Movement.ReadValue<Vector2>();
-            var velocity = move * _speed;
 
-            if (_playerGrounded)
-                velocity.x = 0f;
-            if (!_playerGrounded)
-            {
-                velocity.x += -20f * Time.deltaTime;
-            }
-
-            _anim.SetFloat("Speed", move.magnitude);
-
-            var playerMove = new Vector3(0, 0, move.y);
-
-            transform.Translate(playerMove * Time.deltaTime * _speed);
-            transform.Rotate(0, move.x, 0);
-
-            _playerGrounded = _controller.isGrounded;
 
         }
 

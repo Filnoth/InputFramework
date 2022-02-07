@@ -44,6 +44,7 @@ namespace Game.Scripts.LiveObjects
         private KeyState _keyState;
         [SerializeField]
         private GameObject _marker;
+        private PlayerInputActions _input;
 
         private bool _inHoldState = false;
 
@@ -69,8 +70,14 @@ namespace Game.Scripts.LiveObjects
         private void OnEnable()
         {
             InteractableZone.onZoneInteractionComplete += SetMarker;
-
+            //_input.Player.Enable();
+           // _input.Player.Interact.performed += Interact_performed;
         }
+
+       /* private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext context)
+        {
+            
+        }*/
 
         private void OnTriggerEnter(Collider other)
         {
