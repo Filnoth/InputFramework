@@ -172,18 +172,18 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""VertMove"",
-                    ""type"": ""Button"",
-                    ""id"": ""591c001e-fcc3-46b7-bee8-c69bc2005597"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Vert"",
+                    ""type"": ""Value"",
+                    ""id"": ""5c0da6f7-7bba-42f3-b75f-58aa12b78f31"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Thrust"",
-                    ""type"": ""Button"",
-                    ""id"": ""1d353454-b44e-40d8-8188-c15832710677"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Yaw"",
+                    ""type"": ""Value"",
+                    ""id"": ""703204cf-30a2-4b91-8983-720fa26d83ad"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -191,7 +191,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""5e4633e9-8c73-47b1-8dd5-394312e914b6"",
+                    ""id"": ""b9465565-29d4-4439-9c2f-a82f50477763"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -202,7 +202,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""3dda32d2-9a26-482e-9f68-ab2aa3bf0cd3"",
+                    ""id"": ""9a709271-8068-491d-8fd8-ec3faa414ad0"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -213,7 +213,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""2bf3d7dd-5c16-4ed9-9eb3-ee8002e6bdef"",
+                    ""id"": ""2e4b2ee7-6b54-453e-a8f5-9677eb830c2f"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -224,7 +224,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""f1bd2700-d682-4f25-b21b-f1800a772f9b"",
+                    ""id"": ""3cefa2e1-adab-4817-941a-d48747b5c1ec"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -235,7 +235,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""0675524a-edf6-439b-9b56-0be69aac72d6"",
+                    ""id"": ""48307200-e27e-467c-8260-9cb4db3e1e6b"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -245,37 +245,70 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""02e4dd85-b6a3-4678-8e7f-b0a30c3b8586"",
-                    ""path"": ""<Keyboard>/leftAlt"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""565626a8-a5d1-488d-819d-ec22b45dbdd7"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""VertMove"",
-                    ""isComposite"": false,
+                    ""action"": ""Vert"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""5a614e74-bb78-4bc9-baa3-8cdc170fda1e"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""name"": ""negative"",
+                    ""id"": ""626acbe2-5908-4a36-96b7-f62ca1caeca5"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""VertMove"",
+                    ""action"": ""Vert"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""b45c560f-e807-4a79-abd5-b4789bafe852"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Vert"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""e1cb496c-503a-47a8-9397-bdd1c1116c5c"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yaw"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""68ad6af7-4c6d-4efb-953a-b2baa69e29ca"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""name"": ""negative"",
+                    ""id"": ""13421c36-df62-4ab9-81ab-f1af78e66bbc"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Thrust"",
+                    ""action"": ""Yaw"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""b7d2a6fc-eba0-457c-86fe-88b1a0be0937"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yaw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -365,6 +398,61 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""be8d605e-01df-410a-b659-3e203693410c"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""479e9e92-db10-420d-b310-5e1533ee9659"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""ec40669b-73f9-47a4-bb19-4b600a43046e"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d2f56251-4dd8-4960-86b2-968afb62d9e4"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""68956485-4b5a-412c-aa06-160947fc64a2"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""961a311d-3178-4a9b-bfc1-2984710479b6"",
                     ""path"": ""<Keyboard>/r"",
@@ -377,8 +465,30 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""b8116f6c-94cf-4b23-8b33-08226a729cea"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lift"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""277d102d-593c-4391-aa04-03c3773bb582"",
                     ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Lower"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5965dd3a-bf84-44d2-927e-ee393d45f87e"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -398,8 +508,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         // Drone
         m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
         m_Drone_HoriMove = m_Drone.FindAction("HoriMove", throwIfNotFound: true);
-        m_Drone_VertMove = m_Drone.FindAction("VertMove", throwIfNotFound: true);
-        m_Drone_Thrust = m_Drone.FindAction("Thrust", throwIfNotFound: true);
+        m_Drone_Vert = m_Drone.FindAction("Vert", throwIfNotFound: true);
+        m_Drone_Yaw = m_Drone.FindAction("Yaw", throwIfNotFound: true);
         // ForkLift
         m_ForkLift = asset.FindActionMap("ForkLift", throwIfNotFound: true);
         m_ForkLift_Movement = m_ForkLift.FindAction("Movement", throwIfNotFound: true);
@@ -496,15 +606,15 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Drone;
     private IDroneActions m_DroneActionsCallbackInterface;
     private readonly InputAction m_Drone_HoriMove;
-    private readonly InputAction m_Drone_VertMove;
-    private readonly InputAction m_Drone_Thrust;
+    private readonly InputAction m_Drone_Vert;
+    private readonly InputAction m_Drone_Yaw;
     public struct DroneActions
     {
         private @PlayerInputActions m_Wrapper;
         public DroneActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @HoriMove => m_Wrapper.m_Drone_HoriMove;
-        public InputAction @VertMove => m_Wrapper.m_Drone_VertMove;
-        public InputAction @Thrust => m_Wrapper.m_Drone_Thrust;
+        public InputAction @Vert => m_Wrapper.m_Drone_Vert;
+        public InputAction @Yaw => m_Wrapper.m_Drone_Yaw;
         public InputActionMap Get() { return m_Wrapper.m_Drone; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -517,12 +627,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @HoriMove.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnHoriMove;
                 @HoriMove.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnHoriMove;
                 @HoriMove.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnHoriMove;
-                @VertMove.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnVertMove;
-                @VertMove.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnVertMove;
-                @VertMove.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnVertMove;
-                @Thrust.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnThrust;
-                @Thrust.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnThrust;
-                @Thrust.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnThrust;
+                @Vert.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnVert;
+                @Vert.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnVert;
+                @Vert.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnVert;
+                @Yaw.started -= m_Wrapper.m_DroneActionsCallbackInterface.OnYaw;
+                @Yaw.performed -= m_Wrapper.m_DroneActionsCallbackInterface.OnYaw;
+                @Yaw.canceled -= m_Wrapper.m_DroneActionsCallbackInterface.OnYaw;
             }
             m_Wrapper.m_DroneActionsCallbackInterface = instance;
             if (instance != null)
@@ -530,12 +640,12 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @HoriMove.started += instance.OnHoriMove;
                 @HoriMove.performed += instance.OnHoriMove;
                 @HoriMove.canceled += instance.OnHoriMove;
-                @VertMove.started += instance.OnVertMove;
-                @VertMove.performed += instance.OnVertMove;
-                @VertMove.canceled += instance.OnVertMove;
-                @Thrust.started += instance.OnThrust;
-                @Thrust.performed += instance.OnThrust;
-                @Thrust.canceled += instance.OnThrust;
+                @Vert.started += instance.OnVert;
+                @Vert.performed += instance.OnVert;
+                @Vert.canceled += instance.OnVert;
+                @Yaw.started += instance.OnYaw;
+                @Yaw.performed += instance.OnYaw;
+                @Yaw.canceled += instance.OnYaw;
             }
         }
     }
@@ -597,8 +707,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     public interface IDroneActions
     {
         void OnHoriMove(InputAction.CallbackContext context);
-        void OnVertMove(InputAction.CallbackContext context);
-        void OnThrust(InputAction.CallbackContext context);
+        void OnVert(InputAction.CallbackContext context);
+        void OnYaw(InputAction.CallbackContext context);
     }
     public interface IForkLiftActions
     {

@@ -30,9 +30,14 @@ namespace Game.Scripts.LiveObjects
         public static event Action OnEnterFlightMode;
         public static event Action onExitFlightmode;
 
+        private PlayerInputActions _input;
+
         private void OnEnable()
         {
             InteractableZone.onZoneInteractionComplete += EnterFlightMode;
+
+            _input = new PlayerInputActions();
+            _input.Drone.Enable();
         }
 
         private void EnterFlightMode(InteractableZone zone)
@@ -59,8 +64,9 @@ namespace Game.Scripts.LiveObjects
         {
             if (_inFlightMode)
             {
-                CalculateTilt();
-                CalculateMovementUpdate();
+                //CalculateTilt();
+                HorizontalMovement();
+                //CalculateMovementUpdate();
 
                 if (Input.GetKeyDown(KeyCode.Escape))
                 {
@@ -75,10 +81,11 @@ namespace Game.Scripts.LiveObjects
         {
             _rigidbody.AddForce(transform.up * (9.81f), ForceMode.Acceleration);
             if (_inFlightMode)
-                CalculateMovementFixedUpdate();
+                //CalculateMovementFixedUpdate();
+                VertMovement();
         }
 
-        private void CalculateMovementUpdate()
+        /*private void CalculateMovementUpdate()
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
@@ -119,7 +126,31 @@ namespace Game.Scripts.LiveObjects
                 transform.rotation = Quaternion.Euler(-30, transform.localRotation.eulerAngles.y, 0);
             else 
                 transform.rotation = Quaternion.Euler(0, transform.localRotation.eulerAngles.y, 0);
+        }*/
+
+        
+
+        private void HorizontalMovement()
+        {
+            var move = _input.Drone.HoriMove.ReadValue<Vector2>();
+            float pitch = move.y * 30;
+            float roll = move.x * 30;
+
+            var rotate = _input.Drone.Yaw.ReadValue<float>();
+            var yaw = transform.localRotation.eulerAngles;
+            yaw.y += rotate * _speed / 5;
+
+            transform.rotation = Quaternion.Euler(pitch , yaw.y, -roll);
         }
+
+        private void VertMovement()
+        {
+            var move = _input.Drone.Vert.ReadValue<float>();
+
+            _rigidbody.AddForce(transform.up * move * _speed, ForceMode.Acceleration);
+        }
+
+        
 
         private void OnDisable()
         {
