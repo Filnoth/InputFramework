@@ -34,10 +34,18 @@ namespace Game.Scripts.LiveObjects
 
         private void OnEnable()
         {
-            InteractableZone.onZoneInteractionComplete += EnterFlightMode;
-
             _input = new PlayerInputActions();
             _input.Drone.Enable();
+            InteractableZone.onZoneInteractionComplete += EnterFlightMode;
+
+        }
+
+        private void LeaveDrone_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+        {
+            _inFlightMode = false;
+            onExitFlightmode?.Invoke();
+            ExitFlightMode();
+            Debug.Log("exit flight");
         }
 
         private void EnterFlightMode(InteractableZone zone)
@@ -50,6 +58,7 @@ namespace Game.Scripts.LiveObjects
                 OnEnterFlightMode?.Invoke();
                 UIManager.Instance.DroneView(true);
                 _interactableZone.CompleteTask(4);
+                Debug.Log("Enterflightmode");
             }
         }
 
@@ -57,23 +66,25 @@ namespace Game.Scripts.LiveObjects
         {            
             _droneCam.Priority = 9;
             _inFlightMode = false;
-            UIManager.Instance.DroneView(false);            
+            UIManager.Instance.DroneView(false);
+            _input.Drone.Disable();
         }
 
         private void Update()
         {
             if (_inFlightMode)
             {
+                _input.Drone.LeaveDrone.performed += LeaveDrone_performed;
                 //CalculateTilt();
                 HorizontalMovement();
                 //CalculateMovementUpdate();
 
-                if (Input.GetKeyDown(KeyCode.Escape))
+                /*if (Input.GetKeyDown(KeyCode.Escape))
                 {
                     _inFlightMode = false;
                     onExitFlightmode?.Invoke();
                     ExitFlightMode();
-                }
+                }*/
             }
         }
 

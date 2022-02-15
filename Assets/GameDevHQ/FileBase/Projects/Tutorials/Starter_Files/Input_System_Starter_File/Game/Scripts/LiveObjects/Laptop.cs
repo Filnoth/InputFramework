@@ -52,6 +52,7 @@ namespace Game.Scripts.LiveObjects
                     _hacked = false;
                     onHackEnded?.Invoke();
                     ResetCameras();
+                    Debug.Log("exit laptop");
                 }
             }
         }
@@ -76,6 +77,7 @@ namespace Game.Scripts.LiveObjects
 
         private void InteractableZone_onHoldEnded(int zoneID)
         {
+            Debug.Log("test zone id:" + zoneID);
             if (zoneID == 3) //Hacking terminal
             {
                 if (_hacked == true)
