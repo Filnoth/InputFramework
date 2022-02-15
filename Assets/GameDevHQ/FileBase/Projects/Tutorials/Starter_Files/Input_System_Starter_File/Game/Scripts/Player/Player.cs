@@ -17,6 +17,7 @@ namespace Game.Scripts.Player
         private bool _playerGrounded;
         [SerializeField]
         private Detonator _detonator;
+        [SerializeField]
         private bool _canMove = true;
         [SerializeField]
         private CinemachineVirtualCamera _followCam;
@@ -130,6 +131,7 @@ namespace Game.Scripts.Player
         {
             _canMove = false;
             _followCam.Priority = 9;
+            Debug.Log("ReleasePlayerControl");
         }
 
         private void ReturnPlayerControl()
@@ -137,6 +139,7 @@ namespace Game.Scripts.Player
             _model.SetActive(true);
             _canMove = true;
             _followCam.Priority = 10;
+            Debug.Log("Returnplayer");
         }
 
         private void HidePlayer()

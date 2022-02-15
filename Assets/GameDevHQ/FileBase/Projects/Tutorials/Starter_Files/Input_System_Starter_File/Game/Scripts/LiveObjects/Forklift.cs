@@ -78,6 +78,7 @@ namespace Game.Scripts.LiveObjects
             _forkliftCam.Priority = 9;            
             _driverModel.SetActive(false);
             onDriveModeExited?.Invoke();
+            _input.ForkLift.Disable();
             
         }
 
@@ -88,7 +89,10 @@ namespace Game.Scripts.LiveObjects
                 //LiftControls();
                 CalcutateMovement();
                 if (Input.GetKeyDown(KeyCode.Escape))
+                {
                     ExitDriveMode();
+                    Debug.Log("exit forklift");
+                }
             }
 
            

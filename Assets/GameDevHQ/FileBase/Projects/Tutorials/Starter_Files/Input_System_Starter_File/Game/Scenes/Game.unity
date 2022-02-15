@@ -2898,7 +2898,7 @@ MonoBehaviour:
   _displayMessage: Break the Crate
   _zoneItems: []
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
-  _zoneKeyInput: 101
+  _zoneKeyInput: 0
   _keyState: 0
   _marker: {fileID: 1808342870}
 --- !u!1001 &198573547
@@ -5279,6 +5279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _detonator: {fileID: 2496590969500232579}
+  _canMove: 1
   _followCam: {fileID: 1266060213}
   _model: {fileID: 852618543}
 --- !u!4 &359860634
@@ -5290,7 +5291,7 @@ Transform:
   m_GameObject: {fileID: 359860631}
   m_LocalRotation: {x: -0, y: -0.7823743, z: -0, w: 0.6228086}
   m_LocalPosition: {x: -1.68, y: 0.39999998, z: -10.9}
-  m_LocalScale: {x: 0.77586, y: 0.77586, z: 0.77586}
+  m_LocalScale: {x: 0.7758602, y: 0.77586, z: 0.7758602}
   m_Children:
   - {fileID: 744979006}
   m_Father: {fileID: 0}
@@ -7559,7 +7560,7 @@ MonoBehaviour:
   _zoneItems:
   - {fileID: 758722189}
   _inventoryIcon: {fileID: 21300000, guid: 8e46bcb2f14d4d144b9e4a395b47efa2, type: 3}
-  _zoneKeyInput: 101
+  _zoneKeyInput: 0
   _keyState: 0
   _marker: {fileID: 605505802}
 --- !u!4 &482471386 stripped
@@ -9354,7 +9355,7 @@ MonoBehaviour:
   _displayMessage: Denotate C4
   _zoneItems: []
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
-  _zoneKeyInput: 32
+  _zoneKeyInput: 101
   _keyState: 0
   _marker: {fileID: 1331263896}
 --- !u!1001 &565131287
@@ -11429,7 +11430,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 3.6117215e+12}
+  m_BoundingSphereOverride: {x: 4.0999703e-19, y: 9.1858e-41, z: 1.0482033e-20, w: 9.1858e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -15804,7 +15805,7 @@ MonoBehaviour:
   _displayMessage: Reset
   _zoneItems: []
   _inventoryIcon: {fileID: 0}
-  _zoneKeyInput: 101
+  _zoneKeyInput: 0
   _keyState: 0
   _marker: {fileID: 1578479318}
 --- !u!1 &967188505
@@ -23014,7 +23015,7 @@ MonoBehaviour:
   _displayMessage: Drive Forklift
   _zoneItems: []
   _inventoryIcon: {fileID: 21300000, guid: 88841726d7ebbfc46bf799ee1bfb7d3f, type: 3}
-  _zoneKeyInput: 101
+  _zoneKeyInput: 32
   _keyState: 0
   _marker: {fileID: 1840441541}
 --- !u!4 &1277958657 stripped
