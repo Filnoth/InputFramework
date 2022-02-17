@@ -23,15 +23,50 @@ namespace Game.Scripts.LiveObjects
         public static event Action onHackComplete;
         public static event Action onHackEnded;
 
+        private PlayerInputActions _input;
+
         private void OnEnable()
         {
             InteractableZone.onHoldStarted += InteractableZone_onHoldStarted;
             InteractableZone.onHoldEnded += InteractableZone_onHoldEnded;
+
+            _input = new PlayerInputActions();
+            _input.Player.Enable();
+            _input.Player.Interact.performed += Interact_performed;
+            _input.Player.Escape.performed += Escape_performed;
+        }
+
+        private void Escape_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+        {
+            if (_hacked == true)
+            {
+                _hacked = false;
+                onHackEnded?.Invoke();
+                ResetCameras();
+            }
+        }
+
+        private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+        {
+            if (_hacked == true)
+            {
+                var previous = _activeCamera;
+                _activeCamera++;
+
+
+                if (_activeCamera >= _cameras.Length)
+                    _activeCamera = 0;
+
+
+                _cameras[_activeCamera].Priority = 11;
+                _cameras[previous].Priority = 9;
+            }
+               
         }
 
         private void Update()
         {
-            if (_hacked == true)
+            /*if (_hacked == true)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
@@ -52,9 +87,8 @@ namespace Game.Scripts.LiveObjects
                     _hacked = false;
                     onHackEnded?.Invoke();
                     ResetCameras();
-                    Debug.Log("exit laptop");
                 }
-            }
+            }*/
         }
 
         void ResetCameras()

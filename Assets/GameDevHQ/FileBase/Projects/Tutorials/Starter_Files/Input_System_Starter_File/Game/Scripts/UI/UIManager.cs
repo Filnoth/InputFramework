@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Game.Scripts.LiveObjects;
 
 namespace Game.Scripts.UI
 {
@@ -28,6 +29,8 @@ namespace Game.Scripts.UI
         [SerializeField]
         private RawImage _droneCamView;
 
+        private InteractableZone _zone;
+
         private void Awake()
         {
             _instance = this;
@@ -48,6 +51,8 @@ namespace Game.Scripts.UI
         {
             _droneCamView.enabled = Active;
         }
+
+        
     }
 }
 

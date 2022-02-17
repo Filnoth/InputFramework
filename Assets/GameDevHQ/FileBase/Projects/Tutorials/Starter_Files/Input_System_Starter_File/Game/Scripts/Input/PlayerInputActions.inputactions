@@ -48,7 +48,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -59,7 +59,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -70,7 +70,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -81,7 +81,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -103,7 +103,7 @@
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -114,7 +114,7 @@
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -125,7 +125,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -136,7 +136,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -147,7 +147,7 @@
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -158,7 +158,7 @@
                     "path": "<DualShockGamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -169,7 +169,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -180,7 +180,7 @@
                     "path": "<DualShockGamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -242,7 +242,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -253,7 +253,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -264,7 +264,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -275,7 +275,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -297,7 +297,7 @@
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -308,7 +308,7 @@
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -319,7 +319,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -330,7 +330,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "HoriMove",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -352,7 +352,7 @@
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Vert",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -363,7 +363,7 @@
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Vert",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -385,7 +385,7 @@
                     "path": "<Gamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Vert",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -396,7 +396,7 @@
                     "path": "<Gamepad>/rightStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Vert",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -418,7 +418,7 @@
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Yaw",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -429,7 +429,7 @@
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Yaw",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -451,7 +451,7 @@
                     "path": "<Gamepad>/rightStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Yaw",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -462,7 +462,7 @@
                     "path": "<Gamepad>/rightStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Yaw",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -473,7 +473,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "LeaveDrone",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -484,7 +484,7 @@
                     "path": "<DualShockGamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "LeaveDrone",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -546,7 +546,7 @@
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -557,7 +557,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -568,7 +568,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -579,7 +579,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -601,7 +601,7 @@
                     "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -612,7 +612,7 @@
                     "path": "<Gamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -623,7 +623,7 @@
                     "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -634,7 +634,7 @@
                     "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -645,7 +645,7 @@
                     "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Lift",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -656,7 +656,7 @@
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Lift",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -667,7 +667,7 @@
                     "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Lower",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -678,7 +678,7 @@
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Lower",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -689,7 +689,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard",
                     "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -700,7 +700,7 @@
                     "path": "<DualShockGamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PS4",
                     "action": "Escape",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -708,5 +708,28 @@
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "PS4",
+            "bindingGroup": "PS4",
+            "devices": [
+                {
+                    "devicePath": "<DualShockGamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }

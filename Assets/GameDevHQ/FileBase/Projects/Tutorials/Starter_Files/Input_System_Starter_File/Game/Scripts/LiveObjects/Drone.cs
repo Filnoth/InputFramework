@@ -45,7 +45,6 @@ namespace Game.Scripts.LiveObjects
             _inFlightMode = false;
             onExitFlightmode?.Invoke();
             ExitFlightMode();
-            Debug.Log("exit flight");
         }
 
         private void EnterFlightMode(InteractableZone zone)
@@ -58,7 +57,6 @@ namespace Game.Scripts.LiveObjects
                 OnEnterFlightMode?.Invoke();
                 UIManager.Instance.DroneView(true);
                 _interactableZone.CompleteTask(4);
-                Debug.Log("Enterflightmode");
             }
         }
 
