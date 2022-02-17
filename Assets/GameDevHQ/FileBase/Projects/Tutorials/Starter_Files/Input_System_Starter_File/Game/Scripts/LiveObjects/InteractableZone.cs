@@ -5,6 +5,8 @@ using UnityEngine;
 using Game.Scripts.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.UI;
+using Game.Scripts.Player;
 
 
 namespace Game.Scripts.LiveObjects
@@ -23,6 +25,7 @@ namespace Game.Scripts.LiveObjects
             Press,
             PressHold
         }
+
 
         [SerializeField]
         private ZoneType _zoneType;
@@ -47,6 +50,14 @@ namespace Game.Scripts.LiveObjects
         [SerializeField]
         private GameObject _marker;
         private PlayerInputActions _input;
+
+        [SerializeField]
+        public int _controlDevice;
+        private Keyboard keyboard = Keyboard.current;
+
+        
+        
+
 
         private bool _inHoldState = false;
 
@@ -79,6 +90,7 @@ namespace Game.Scripts.LiveObjects
             _input.Player.Enable();
             _input.Player.Interact.started += Interact_started;
             _input.Player.Interact.canceled += Interact_canceled;
+
 
         }
         
@@ -123,6 +135,8 @@ namespace Game.Scripts.LiveObjects
 
         private void OnTriggerEnter(Collider other)
         {
+            var controllerUse = _input.Player.Interact.GetBindingDisplayString(bindingIndex: (_controlDevice));
+
             if (other.CompareTag("Player") && _currentZoneID > _requiredID)
             {
                 switch (_zoneType)
@@ -134,12 +148,12 @@ namespace Game.Scripts.LiveObjects
                             if (_displayMessage != null)
                             {
                                 //string message = $"Press the {_zoneKeyInput.ToString()} key to {_displayMessage}.";
-                                string message = $"Press the E key to {_displayMessage}.";
+                                string message = $"Press the {controllerUse} key to {_displayMessage}.";
                                 UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                             }
                             else
                                 //UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {_zoneKeyInput.ToString()} key to collect");
-                            UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the E key to collect");
+                            UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {controllerUse} key to collect");
                         }
                         break;
 
@@ -150,12 +164,12 @@ namespace Game.Scripts.LiveObjects
                             if (_displayMessage != null)
                             {
                                 //string message = $"Press the {_zoneKeyInput.ToString()} key to {_displayMessage}.";
-                                string message = $"Press the E key to {_displayMessage}.";
+                                string message = $"Press the {controllerUse} key to {_displayMessage}.";
                                 UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                             }
                             else
                                 //UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {_zoneKeyInput.ToString()} key to perform action");
-                            UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the E key to perform action");
+                            UIManager.Instance.DisplayInteractableZoneMessage(true, $"Press the {controllerUse} key to perform action");
                         }
                         break;
 
@@ -164,12 +178,12 @@ namespace Game.Scripts.LiveObjects
                         if (_displayMessage != null)
                         {
                             //string message = $"Press the {_zoneKeyInput.ToString()} key to {_displayMessage}.";
-                            string message = $"Hold the E key to {_displayMessage}.";
+                            string message = $"Hold the {controllerUse} key to {_displayMessage}.";
                             UIManager.Instance.DisplayInteractableZoneMessage(true, message);
                         }
                         else
                            // UIManager.Instance.DisplayInteractableZoneMessage(true, $"Hold the {_zoneKeyInput.ToString()} key to perform action");
-                        UIManager.Instance.DisplayInteractableZoneMessage(true, $"Hold the E key to perform action");
+                        UIManager.Instance.DisplayInteractableZoneMessage(true, $"Hold the {controllerUse} key to perform action");
                         break;
                 }
             }
@@ -177,6 +191,7 @@ namespace Game.Scripts.LiveObjects
 
         private void Update()
         {
+
             /*if (_inZone == true)
             {
 
@@ -227,6 +242,8 @@ namespace Game.Scripts.LiveObjects
 
                
             }*/
+
+
         }
        
         private void CollectItems()
@@ -281,7 +298,6 @@ namespace Game.Scripts.LiveObjects
             {
                 _currentZoneID++;
                 onZoneInteractionComplete?.Invoke(this);
-                Debug.Log("Complete task" + zoneID);
             }
         }
 
@@ -311,8 +327,14 @@ namespace Game.Scripts.LiveObjects
         private void OnDisable()
         {
             InteractableZone.onZoneInteractionComplete -= SetMarker;
-        }       
-       
+        }
+
+
+        public void Control(int check)
+        {
+            _controlDevice = check;
+        }
+
     }
 }
 

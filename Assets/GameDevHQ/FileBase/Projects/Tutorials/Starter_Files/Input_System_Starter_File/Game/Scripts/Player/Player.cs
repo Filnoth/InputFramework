@@ -25,6 +25,7 @@ namespace Game.Scripts.Player
         private GameObject _model;
 
         private PlayerInputActions _input;
+        //private InteractableZone _zone;
 
         private void OnEnable()
         {
@@ -53,6 +54,7 @@ namespace Game.Scripts.Player
             _input = new PlayerInputActions();
             _input.Player.Enable();
             _input.Player.Interact.performed += Interact_performed;
+
         }
 
         private void Interact_performed(InputAction.CallbackContext context)
@@ -64,8 +66,6 @@ namespace Game.Scripts.Player
         {
             if (_canMove == true)
                 CalcutateMovement();
-
-
         }
 
         private void CalcutateMovement()
@@ -131,7 +131,6 @@ namespace Game.Scripts.Player
         {
             _canMove = false;
             _followCam.Priority = 9;
-            Debug.Log("ReleasePlayerControl");
         }
 
         private void ReturnPlayerControl()
@@ -139,7 +138,6 @@ namespace Game.Scripts.Player
             _model.SetActive(true);
             _canMove = true;
             _followCam.Priority = 10;
-            Debug.Log("Returnplayer");
         }
 
         private void HidePlayer()
